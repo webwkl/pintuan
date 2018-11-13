@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script src="js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+    拼团单号：<span id="collageNo"></span><br />
+    <button id="btnToCollage">我要开团</button>
+    <button id="btnJoinCollage">我要参团</button>
+    <button id="btnPay">微信支付</button>
+    <button id="btnRefund">订单退款</button><br />
+    购买记录：<br /><span id="PurchaseRecord"></span><br />
+    查看卡号卡密：<br /><span id="OrderDetail"></span><br /><br /><br />
+	<button id="btnOverdue">失败订单退款</button><br />
+    <script>
+        var host = "https://benz.wx.fractalist.com.cn/";
+        $('#btnToCollage').bind('click', function () {
+            var url = host + "Collage/ToCollage";
+            $.ajax({
+                type: "post",
+                url: url,
+                data: null,
+                dataType: "json",
+                success: function (data) {
+                    if (data.errcode > 0) {
+                        alert("开团成功");
+                    }
+                    else {
+                        alert(data.errmsg);
+                    }
+                }
+            });
+        });
+
+        $('#btnOverdue').bind('click', function () {
+            var url = host + "Collage/OverdueOrFailRefund";
+            $.ajax({
+                type: "post",
+                url: url,
+                data: null,
+                dataType: "json",
+                success: function (data) {
+                    if (data.errcode > 0) {
+                        alert("订单退款成功");
+                    }
+                    else {
+                        alert(data.errmsg);
+                    }
+                }
+            });
+        });
+
+        param = { collageId: 17 };
+
+        $('#btnPay').bind('click', function () {
+            var url = host + "Collage/payOrder";
+            $.ajax({
+                type: "post",
+                url: url,
+                data: param,
+                dataType: "json",
+                success: function (data) {
+                    if (data.errcode == 2) {
+                        location.href = data.url;
+                    } else if (data.Success == 1) {
+                        setTimeout(function () { isClick = true }, 5000);
+                        alert(data.Message);
+                        location.href = "https://benz.wx.fractalist.com.cn/Collage/Success";
+                    } else if (data.errcode == -2) {
+                        alert(data.errmsg);
+                    }
+                    else {
+                        alert("支付失败");
+                    }
+                }
+            });
+        });
+
+
+        $('#btnRefund').bind('click', function () {
+            var url = host + "Collage/RefundOrder";
+            $.ajax({
+                type: "post",
+                url: url,
+                data: { OrderNo: "1540456913615" },
+                dataType: "json",
+                success: function (data) {
+                    if (data.errcode == 1) {
+                        alert("退款成功");
+                    }
+                    else {
+                        alert(result.errmsg);
+                    }
+                }
+            });
+        });
+
+
+        $('#btnJoinCollage').bind('click', function () {
+            var url = host + "Collage/JoinCollage";
+            $.ajax({
+                type: "post",
+                url: url,
+                data: param,
+                dataType: "json",
+                success: function (data) {
+                    if (data.errcode == 1) {
+                        alert("参团成功");
+                    } else {
+                        alert(data.errmsg);
+                    }
+                }
+            });
+        });
+
+        $(function () {
+            getCollage();
+            function getCollage() {
+                var url = host + "Collage/LoadCollage";
+                $.ajax({
+                    type: "post",
+                    url: url,
+                    data: param,
+                    dataType: "json",
+                    success: function (data) {
+                        if (data.errcode == 1) {
+                            $("#collageNo").html(data.data.CollageNo);
+                        }
+
+                    }
+                });
+            }
+            function formatDate(jsonDate) {
+                //json日期格式转换为正常格式
+                var jsonDateStr = jsonDate.toString();
+                try {
+                    var date = new Date(parseInt(jsonDateStr.replace("/Date(", "").replace(")/", ""), 10));
+                    var month = date.getMonth() + 1 < 10 ? "0" + (date.getMonth() + 1) : date.getMonth() + 1;
+                    var day = date.getDate() < 10 ? "0" + date.getDate() : date.getDate();
+                    var hours = date.getHours();
+                    var minutes = date.getMinutes();
+                    var seconds = date.getSeconds();
+                    var milliseconds = date.getMilliseconds();
+                    return date.getFullYear() + "-" + month + "-" + day + " " + hours + ":" + minutes + ":" + seconds;// + "." + milliseconds;//年月日时分秒
+                    //return date.getFullYear() + "-" + month + "-" + day
+                } catch (ex) {
+                    return "时间格式转换错误";
+                }
+            }
+            getPurchaseRecord();
+            function getPurchaseRecord() {
+                var url = host + "Collage/LoadPurchaseRecord";
+                $.ajax({
+                    type: "post",
+                    url: url,
+                    data: null,
+                    dataType: "json",
+                    success: function (data) {
+                        if (data.errcode == 1) {
+                            if (data.data.length > 0) {
+                                var gmjl = '';
+                                for (var i = 0; i < data.data.length; i++) {
+                                    gmjl += "产品：" + data.data[i].ProductDesc + "<br/>价格：" + data.data[i].OrderTotal + "元<br/>开团时间：" + formatDate(data.data[i].CreateTime) + "<br/>状态：" + data.data[i].PayStateShow;
+                                }
+                                $("#PurchaseRecord").html(gmjl);
+                            }
+                        }
+
+                    }
+                });
+            }
+
+
+            loadOrderDetail();
+            function loadOrderDetail() {
+                var url = host + "Collage/LoadOrderDetail";
+                $.ajax({
+                    type: "post",
+                    url: url,
+                    data: param,
+                    dataType: "json",
+                    success: function (data) {
+                        if (data.errcode == 1) {
+                            var kxx = "卡号：" + data.data.CardNo + "<br/>卡密：" + data.data.CardPwd;
+                            $("#OrderDetail").html(kxx);
+                        }
+                    }
+                });
+            }
+        });
+
+
+    </script>
+
+</body>
+</html>

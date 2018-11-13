@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>奔驰礼宾用车 • 拼团钜惠</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no, email=no"/>
+<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+</head>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/fightgroup.css?v=1.4">
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/flexible.js"></script>
+<script src="js/clipboard.min.js"></script>
+<body>
+<!--我要参团-->
+<section class="content content1">
+	<article class="time">
+		<div class="time_posi">
+			<span class="joinh">00</span>
+			<span class="joinm">00</span>
+			<span class="joins">00</span>
+		</div>
+	</article>
+	<article class="btn"></article>
+</section>
+<!--邀请好友-->
+<section class="content content2">
+	<article class="btn1" id="btn1"></article>
+</section>
+<!--参加拼团-->
+<section class="content content3">
+	<article class="time1">
+		<span class="joinh">00</span>
+		<span class="joinm">00</span>
+		<span class="joins">00</span>
+	</article>
+	<article class="bottom">
+		<div class="btn2"></div>
+		<div class="btn3"></div>
+	</article>
+</section>
+<!--参加拼团人数 1人-->
+<section class="content content4">
+	<ul class="person">
+		<li class="person_list">
+			<img src="img/person.png"  class="img1" alt="">
+		</li>
+		<li class="person_list">
+			<img src="img/person.png" alt="" class="img2">
+		</li>
+		<li class="person_list">
+			<img src="img/person.png" alt="" class="img3">
+		</li>
+	</ul>
+	<article class="time1">
+		<span class="joinh">00</span>
+		<span class="joinm">00</span>
+		<span class="joins">00</span>
+	</article>
+	<article class="bottom">
+		<div class="btn4"></div>
+		<div class="btn5"></div>
+	</article>
+</section>
+<!--参加拼团2人-->
+<section class="content content5">
+	<ul class="person">
+		<li class="person_list">
+			<img src="img/person.png"  alt="">
+		</li>
+		<li class="person_list">
+			<img src="img/person.png" alt="">
+		</li>
+		<li class="person_list">
+			<img src="img/person.png" alt="">
+		</li>
+	</ul>
+	<article class="time1">
+		<span class="joinh">00</span>
+		<span class="joinm">00</span>
+		<span class="joins">00</span>
+	</article>
+	<article class="bottom">
+		<div class="btn6"></div>
+	</article>
+</section>
+<!--参加拼团人数 3 人-->
+<section class="content content6">
+	<ul class="person">
+		<li class="person_list">
+			<img src="img/person.png" class="img1"  alt="">
+		</li>
+		<li class="person_list">
+			<img src="img/person.png" alt="" class="img2">
+		</li>
+		<li class="person_list">
+			<img src="img/person.png" alt="" class="img3">
+		</li>
+	</ul>
+	<article class="time1">
+		<span class="joinh">00</span>
+		<span class="joinm">00</span>
+		<span class="joins">00</span>
+	</article>
+	<article class="bottom">
+		<div class="btn7"></div>
+		<div class="btn_no"></div>
+		<a href="index.html" class="back"></a>
+	</article>
+</section>
+<!--支付成功查看卡密-->
+<section class="content content7">
+	<a href="index.html" class="back"></a>
+	<article class="ispay">
+		<ul class="person">
+			<li class="person_list">
+				<p class="pay"></p>
+				<img src="img/person.png" class="img1"  alt="" >
+			</li>
+			<li class="person_list">
+				<p class="pay"></p>
+				<img src="img/person.png" class="img2" alt="">
+			</li>
+			<li class="person_list">
+				<p class="pay"></p>
+				<img src="img/person.png" class="img3" alt="">
+			</li>
+		</ul>
+	</article>
+	<!---灰色不可看卡密-->
+	<article class="btn8"></article>
+	<!---可看-->
+	<article class="btn9"></article>
+</section>
+<!--卡号 卡密-->
+<section class="content content8">
+
+	<article class="look">
+		<div class="look_list">
+			<div class="left">
+				<div class="left_left">
+					<span class="">卡号：</span>
+					<span class="">卡密：</span>
+				</div>
+				<div class="left_right">
+					<input type="text" value="0" class="num" id="num1" >
+					<input type="text" value="0" class="num" id="num2" >
+				</div>
+			</div>
+			<div style="width:100%;">
+				<button class="right right1" data-clipboard-action="copy" data-clipboard-target="#num1"></button>
+			</div>
+			
+		</div>
+	</article>
+	<article class="scode">
+		<img src="img/code.png"  alt="" class="code"><br>
+		<img src="img/description.png" alt="" class="description">
+	</article>
+	<article class="centers">
+		<div class="btn10"></div>
+	</article>
+</section>
+<!--拼团失败 有未付款者-->
+<section class="content content9"></section>
+<!--谢谢关注 卷已经抢光了 活动结束-->
+<section class="content content10"></section>
+<!--参团成功一次弹框-->
+<div class="none">
+	<div class="box"></div>
+	<span class="close"></span>
+</div>
+<!--参团失败-->
+<div class="none1">
+	<div class="box1"></div>
+	<span class="close1"></span>
+</div>
+<!--参团成功二次弹框-->
+<div class="none2">
+	<div class="box2"></div>
+	<span class="close2"></span>
+</div>
+<!--参团失败超过两次了-->
+<div class="none3">
+	<div class="box3"></div>
+	<span class="close3"></span>
+</div>
+
+<!--开团成功一次-->
+<div class="none5"></div>
+<div class="none6">
+	<div class="box6"></div>
+	<span class="close6"></span>
+</div>
+<!--开团成功两次-->
+<div class="none7">
+	<div class="box7"></div>
+	<span class="close7"></span>
+</div>
+<input type="hidden" id="collageId">
+</body>
+<script src='https://res.wx.qq.com/open/js/jweixin-1.0.0.js'></script>
+<script src="js/tools.js"></script>
+<script src="js/time.js"></script>
+<script src="js/data.js"></script>
+<script src="js/share.js"></script>
+<script src="js/fightgroup.js?v=1.2"></script>
+<script src="js/startgroup.js"></script>
+
+</html>

@@ -1,0 +1,507 @@
+.content{
+	width: 100%;
+	height: 20.306667rem;
+	position: relative;
+}
+/*我要开团*/
+.content1{
+	background: url(../img/1.jpg) no-repeat;
+	background-size: 100% 100%;
+	/*display: none;*/
+}
+.content1 .time{
+	width: 3.546667rem;
+	height: 2.253333rem;
+	background: url(../img/time.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	left: 3.226667rem;
+	top: 10.54rem;
+	z-index: 11;
+}
+.time .time_posi{
+	padding-top: 1.45rem;
+	padding-left: 0.6rem;
+	font-size: 0;
+}
+.time .time_posi span{
+	width: 0.733333rem;
+	font-size: 0.4rem;
+	color: #fff;
+	text-align: center;	
+	display: inline-block;
+	margin-right: 0.106667rem;
+
+}
+.btn{
+	width: 3.973333rem;
+	height: 1.64rem;
+	background: url(../img/btn1.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	left: 3.0rem;
+	top: 13.2rem;
+	z-index: 11;
+}
+
+/*邀请好友*/
+.content2{
+	background: url(../img/2.jpg?v=1.1) no-repeat;
+	background-size: 100% 100%;
+	display: none;
+}
+.content2 .btn1{
+	width: 3.973333rem;
+	height: 1.786667rem;
+	background: url(../img/btn2.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	left: 3.0rem;
+	top: 13.133333rem;
+	z-index: 11;
+
+}
+/*参加拼团*/
+.content3{
+	background: url(../img/3.jpg?v=1.1) no-repeat;
+	background-size: 100% 100%;
+	display: none;
+}
+
+.time1{
+	width: 3.48rem;
+	height: 0.72rem;
+	font-size: 0;
+	background: url(../img/time1.png) no-repeat;
+	background-size: 100% 100%;
+}
+.content3 .time1{
+	position: absolute;
+	left: 3.226667rem;
+	top: 11.7rem;
+	z-index: 11;
+	padding-left: 0.8rem;
+}
+.joinh,.joinm,.joins{
+	width: 0.56rem;
+	height: 0.72rem;
+	font-size: 0.4rem;
+	color: #fff;
+	line-height: 0.72rem;
+	text-align: center;	
+	display: inline-block;
+	margin-right:0.08rem;
+}
+.content3 .bottom{
+	width: 100%;
+	height: 1.12rem;
+	position: absolute;
+	left: 0;
+	top: 13rem;
+	z-index: 11;
+	display: flex;
+	justify-content: center;
+}
+.content3 .btn2,.content3 .btn3{
+	width: 3.973333rem;
+	height: 1.64rem;
+
+}
+.content3 .btn2{
+	background: url(../img/btn3.png) no-repeat;
+	background-size: 100% 100%;
+}
+.content3 .btn3{
+	background: url(../img/btn4.png) no-repeat;
+	background-size: 100% 100%;
+}
+/*参加拼团人数 1 2 3 人*/
+.content4{
+	background: url(../img/4.jpg?v=1.1) no-repeat;
+	background-size: 100% 100%;
+	display: none;
+	position: relative;
+}
+
+
+.content4 .person,
+.content5 .person,
+.content6 .person{
+	width: 100%;
+	height: 1.626667rem;
+	position: absolute;
+	left: 0;
+	top: 10rem;
+	z-index: 11;
+	display: flex;
+	padding: 0 2.08rem;
+	justify-content: space-between;
+
+}
+
+.content4 .person .person_list,
+.content5 .person .person_list,
+.content6 .person .person_list,
+.content7 .person .person_list{
+	width: 1.626667rem;
+	height: 1.626667rem;
+	background: url(../img/person.png) no-repeat;
+	background-size: 100% 100%;
+	text-align: center;
+	padding-top: 0.026667rem;
+	/*overflow: hidden;*/
+}
+.content4 .person .person_list img,
+.content5 .person .person_list img,
+.content6 .person .person_list img,
+.content7 .person .person_list img{
+	width: 1.586667rem;
+	height: 1.586667rem;
+	border-radius: 50%;
+}
+.content4 .time1,
+.content5 .time1,
+.content6 .time1{
+	position: absolute;
+	left: 3.226667rem;
+	top: 12rem;
+	z-index: 11;
+	padding-left: 0.8rem;
+}
+/*.content6 .time1{
+	top: 13.933333rem;
+}*/
+.content4 .bottom,
+.content5 .bottom,
+.content6 .bottom{
+	width: 100%;
+	/*height: 1.12rem;*/
+	position: absolute;
+	left: 0;
+	top: 13.15rem;
+	z-index: 11;
+	display: flex;
+	justify-content: center;
+}
+/*.content6 .bottom{
+	top: 14.933333rem;
+}*/
+.content4 .btn4,.content4 .btn5{
+	width: 3.973333rem;
+	height: 1.64rem;	
+}
+.content4 .btn4{
+	background: url(../img/btn3.png) no-repeat;
+	background-size: 100% 100%;
+}
+.content4 .btn5{
+	background: url(../img/btn4.png) no-repeat;
+	background-size: 100% 100%;
+}
+/*参团2人*/
+.content5{
+	background: url(../img/5.jpg?v=1.1) no-repeat;
+	background-size: 100% 100%;
+	display: none;
+}
+
+.content5 .bottom .btn6{
+	width: 3.466667rem;
+	height: 1.106667rem;
+	background: url(../img/nopay.png) no-repeat;
+	background-size: 100% 100%;
+}
+/*参团3人*/
+.content6{
+	background: url(../img/6.jpg?v=1.1) no-repeat;
+	background-size: 100% 100%;
+	display: none;
+}
+.content6 .bottom .btn7{
+	width: 3.973333rem;
+	height: 1.64rem;
+	background: url(../img/pay.png) no-repeat;
+	background-size: 100% 100%;
+	display: none;
+}
+.btn_no{
+	width: 3.973333rem;
+	height: 1.64rem;
+	background: url(../img/nopay.png) no-repeat;
+	background-size: 100% 100%;
+	/*display: none;*/
+}
+.bottom .back{
+	width: 1.44rem;
+	height: 0.56rem;
+	background: url(../img/back.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	right: 0.8rem;
+	top: 0.8rem;
+}
+/*支付成功1人*/
+.content7{
+	background: url(../img/9.jpg) no-repeat;
+	background-size: 100% 100%;
+	display: none;
+	position: relative;
+	
+}
+.content7 .back{
+	width: 1.44rem;
+	height: 0.56rem;
+	background: url(../img/back.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	right: 0.666667rem;
+	top: 0.666667rem;
+
+	
+}
+.content7 .ispay{
+	width: 100%;
+	height: 2.333333rem;
+	position: absolute;
+	left: 0;
+	top: 10.4rem;
+	padding-top: 0.613333rem;
+}
+.content7 .person{
+	width: 100%;
+	height: 1.626667rem;
+	display: flex;
+	padding: 0 2.08rem;
+	justify-content: space-between;
+}
+.content7 .ispay .person .person_list{
+	position: relative;	
+}
+.content7 .ispay .person .person_list .pay{
+	width: 1.786667rem;
+	height: 1.386667rem;
+	background: url(../img/tip.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	right:-0.666667rem;
+	top:-0.8rem;
+	z-index: 11;
+	/*display: none;*/
+}
+/*灰色卡密*/
+.content7 .btn8{
+	width: 3.466667rem;
+	height: 1.106667rem;
+	background: url(../img/btn5.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	left: 3.266667rem;
+	top: 13.25rem;
+	z-index: 11;
+	display: none;
+}
+/*可查看卡密*/
+.content7 .btn9{
+	width: 3.973333rem;
+	height: 1.64rem;
+	background: url(../img/btn6.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	left: 3.0rem;
+	top: 13.25rem;
+	z-index: 11;
+	display: none;
+}
+/*查看卡密*/
+.content8{
+	background: url(../img/10.jpg) no-repeat;
+	background-size: 100% 100%;
+	display: none;
+	position: relative;
+	
+}
+
+.content8 .look{
+	
+	padding: 1.946667rem 1.066667rem 1.3rem;
+}
+
+.content8 .look .look_list .left{
+	width: 7.44rem;
+	height: 2.8rem;
+	margin:  0 auto;
+	display: flex;
+}
+.content8 .look .look_list .left span{
+	font-size: 0.533333rem;
+	color: #862a0f;
+	line-height: 1.28rem;
+	
+}
+.content8 .look .look_list .left .num{
+	width: 100%;
+	height: 0.933333rem;
+	font-size: 0.426667rem;
+	color: #3c1306;
+	text-align: left;
+	text-indent: 0.2rem;
+	background: none;
+	display: inline-block;
+}
+
+.content8 .look .look_list .left .left_left span{
+	font-size: 0.533333rem;
+	color: #fff;
+	line-height: 0.933333rem;
+	display: block;
+}
+.content8 .look .look_list .left .left_right{
+	width: 5.8rem;
+	height: 1.76rem;
+	background: #c17d69;
+	border-radius: 0.133333rem;
+}
+.content8 .look .look_list .right{
+	width: 2.6rem;
+	height: 1.786667rem;
+	background: url( ../img/copy.png) no-repeat;
+	background-size: 100% 100%;
+	margin-left: 2.666667rem;
+	margin-top: 0.266667rem;
+}
+.content8 .scode{
+	width: 100%;
+	text-align: center;
+}
+.content8 .scode .code{
+	width: 2.52rem;
+	height: 2.52rem;
+
+	margin-bottom:0.733333rem; 
+}
+.content8 .scode .description{
+	width: 4.76rem;
+	height: 1.213333rem;
+}
+.content8 .centers{
+	width: 100%;
+}
+.content8 .btn10{
+	width: 3.973333rem;
+	height: 1.64rem;
+	background: url(../img/btn7.png) no-repeat;
+	background-size: 100% 100%;
+	margin: 0.533333rem auto 0;
+}
+/*拼团失败有未付款者*/
+.content9{
+	background: url(../img/11.jpg) no-repeat;
+	background-size: 100% 100%;
+	display: none;
+}
+/*活动结束*/
+.content10{
+	background: url(../img/14.jpg) no-repeat;
+	background-size: 100% 100%;
+	display: none;
+}
+
+/*拼团成功*/
+.none,.none1,.none2,.none3,.none4,.none6,.none7{
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 11;
+	background: rgba(0,0,0,0.4);
+	display: none;
+}
+
+.none .box,
+.none2 .box2{
+	width: 7.026667rem;
+	height: 9.546667rem;
+	background: url(../img/success.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -3.506667rem;
+	margin-top: -5rem;
+}
+.none1 .box1{
+	width: 5.96rem;
+	height: 6.066667rem;
+	background: url(../img/fail.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -2.98rem;
+	margin-top: -4rem;
+}
+.none2 .box2{
+	background: url(../img/success1.png) no-repeat;
+	background-size: 100% 100%;
+}
+.close,.close1,.close2,.close3,.close4,.close6,.close7{
+	width: 0.853333rem;
+	height: 0.853333rem;
+	background: url(../img/close.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: 5.3rem;
+	margin-left: -0.426667rem;
+}
+.close1{
+	margin-top: 2.6rem;
+}
+
+.none3 .box3{
+	width: 7.026667rem;
+	height: 8.693333rem;
+	background: url(../img/fail1.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -3.506667rem;
+	margin-top: -5rem;
+}
+
+.none5{
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 11;
+	background: url(../img/share.png?v=1.1);
+	background-size: 100% 100%;
+	display: none;
+}
+.none6 .box6{
+	width: 7.026667rem;
+	height: 9.546667rem;
+	background: url(../img/success3.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -3.506667rem;
+	margin-top: -5rem;
+}
+.none7 .box7{
+	width: 7.026667rem;
+	height: 9.546667rem;
+	background: url(../img/success4.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -3.506667rem;
+	margin-top: -5rem;
+}

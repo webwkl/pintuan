@@ -1,0 +1,119 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-size: 0;
+	position: relative;
+	
+}
+img{
+	width: 100%;
+	height: 17.786667rem;
+	display: block;
+}
+.form{
+
+	width: 100%;
+	height: 13.8rem;
+	background: url(../imgs/img3.jpg) no-repeat;
+	background-size: 100% 100%;
+
+}
+input{
+	font-family: "Microsoft YaHei", Arial, '\5b8b\4f53', sans-serif;
+    border: 0;
+    border-radius: 0;
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+}
+.phone{
+	width: 6.893333rem;
+	height: 1.28rem;
+	font-size: 0.426667rem;
+	color: #666;
+	text-indent: 0.4rem;
+	border:1px solid #767676;
+	border-radius: 10px;
+	background: #fff;
+	margin: 9.36rem 0 0 1.413333rem;
+}
+.btn{
+	width: 3.0rem;
+	height: 1.106667rem;
+	background: url(../imgs/btn.png) no-repeat;
+	background-size: 100% 100%;
+	margin: 0.893333rem 0 0 3.466667rem;
+	display: none;
+}
+.btn1{
+	width: 3.0rem;
+	height: 1.106667rem;
+	background: url(../imgs/btn1.png) no-repeat;
+	background-size: 100% 100%;
+	margin: 0.893333rem 0 0 3.466667rem;
+	display: none;
+}
+.none{
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 11;
+	background: rgba(0,0,0,0.7);
+	display: none;
+}
+.box{
+	width: 6.293333rem;
+	height: 4.253333rem;
+	background: url(../imgs/box.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -3.146667rem;
+	margin-top: -2.4rem;
+}
+.close{
+	width: 0.853333rem;
+	height: 0.853333rem;
+	background: url(../imgs/close.png) no-repeat;
+	background-size: 100% 100%;
+	position: fixed;
+	left: 50%;
+	margin-left: -0.426667rem;
+	top: 11.5rem;
+	z-index: 11;
+}
+p{
+	margin: 0;
+	padding: 0;
+}
+.turnBottom{
+
+	width: 1.986667rem;
+	height: 0.986667rem;
+	background: url(../imgs/turnBottom.png) no-repeat;
+	background-size: 100% 100%;
+	position: fixed;
+	left: 50%;
+	bottom: 0rem;
+	margin-left: -0.973333rem;
+	z-index: 10;
+	animation:myfirst 1s
+	infinite;
+	-moz-animation:myfirst 1s infinite; /* Firefox */
+	-webkit-animation:myfirst 1s infinite; /* Safari and Chrome */
+	-o-animation:myfirst 1s; /* Opera */
+}
+@keyframes myfirst
+{
+	0%   {bottom:0rem;}
+	25%  {bottom: 0.1rem;}
+	50%  {bottom: 0.2rem;}
+	75%  {bottom: 0.1rem;}
+	100% {bottom: 0rem;}
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>奔驰礼宾用车 • 拼团钜惠</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no, email=no"/>
+<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+</head>
+<link rel="stylesheet" href="css/hoot.css">
+
+<body>
+<script src="js/flexible.js"></script>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/shareYR.js" charset="GBK"></script>
+<img src="imgs/img1.jpg" >
+<img src="imgs/img2.jpg" >
+<p class="turnBottom"></p>
+<div class="form">
+	<input type="tel" maxlength="11" class="phone" placeholder="请输入手机号码">
+	<p class="btn"></p>
+	<p class="btn1"></p>
+</div>
+<div class="none">
+	<div class="box"></div>
+	<div class="close"></div>
+</div>
+</body>
+<script>
+$(function(){
+	$(window).scroll(function(){
+        var w_height = $(window).height();//浏览器高度
+        var scroll_top = $(document).scrollTop();
+        //滚动条到顶部的垂直高度
+        if(scroll_top > 1000){
+                $('.turnBottom').hide();
+            }else{
+                $(".turnBottom").show();
+        }
+    });
+	
+	$.ajax({
+		url: 'https://benz.wx.fractalist.com.cn/Collage/LoadSignUp',
+		type: 'post',
+		dataType: 'json',
+		success:function(res){
+			console.log(res)
+			if (res.errcode == 1) {
+				$('.btn1').show();
+				$('.phone').val(res.data.Mobile);
+				$('.phone').attr({
+					disabled: 'disabled'
+					
+				});
+			}else if (res.errcode == -1) {
+				$('.btn').show();
+				
+			}else if (res.errcode == 403) {
+				window.location.href = 'https://benz.wx.fractalist.com.cn/Collage/article'
+			};
+		}
+	})
+	$('.close').on('click', function(event) {
+		event.preventDefault();
+		$('.none').hide();
+	});
+	$('.btn').on('click',function(){
+		var mobile = $('.phone').val();
+		
+		var phones = /^1[34578]\d{9}$/;
+		if(mobile == ''){
+			alert('请输入您的手机号');
+			return false;
+		};
+		if( !phones.test(mobile) ) {
+			alert('请输入正确手机号');
+			return false;
+		}
+		var url = 'https://benz.wx.fractalist.com.cn/Collage/signUp';
+
+		//return false;
+		$.ajax({
+			url: url,
+			type: 'post',
+			dataType: 'json',
+			data: {mobile: mobile},
+			success:function(res){
+				console.log(res)
+				if (res.errcode == 1) {
+					$('.none').show();
+					$('.btn').hide();
+					$('.btn1').show();
+					$('.phone').attr({
+						disabled: 'disabled'
+						
+					});
+				}else if (res.errcode == -1) {
+					alert('报名失败')
+				}else if (res.errcode == 403) {
+					window.location.href = 'https://benz.wx.fractalist.com.cn/Collage/article'
+				};
+			}
+		})
+		
+		
+	})
+})
+</script>
+</html>
